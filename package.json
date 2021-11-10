@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start:prod": "npm run build && node dist/index.js",
+    "start:dicev1": "ts-node src/Dicev1.ts",
     "start": "ts-node src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
