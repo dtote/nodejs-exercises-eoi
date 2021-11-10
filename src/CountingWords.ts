@@ -1,13 +1,22 @@
 const countingWords = (phrase: string) => {
   let count = 0
 
-  const wordsArray = phrase.split(' ')
+  try {
+    const wordsArray = phrase.split(' ').filter(word => word != '')
+    
+    if (wordsArray != []) {
+      for (const index in wordsArray) {
+        count++
+      }
+    } else {
+      return count
+    }
 
-  for (const index in wordsArray) {
-    count++
+    return count
+
+  } catch (error) {
+    throw new Error(`Error: ${error}`)
   }
-  
-  return count
 }
 
-console.log(countingWords("This is a test of a phrase"))
+console.log(countingWords("This is a test"))
