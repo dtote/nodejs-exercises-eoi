@@ -1,12 +1,14 @@
 {
   "name": "template-base-ts",
   "version": "1.0.0",
-  "description": "",
+  "description": "## Install",
   "main": "index.js",
   "scripts": {
     "start:prod": "npm run build && node dist/index.js",
+    "start:dicev1": "ts-node src/Dicev1.ts",
     "start": "ts-node src/index.ts",
     "start:counting-words": "ts-node src/CountingWords.ts",
+    "start:server": "ts-node src/server.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
     "lint": "eslint --max-warnings 0 . --ext .ts"
