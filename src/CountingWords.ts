@@ -1,13 +1,11 @@
-const countingWords = (phrase: string) => {
-  let count = 0
+const countingWords = (phrase: string): number => {
 
-  const wordsArray = phrase.split(' ')
+  try {
+    return phrase.split(' ').filter(word => word != '').length
 
-  for (const index in wordsArray) {
-    count++
+  } catch (error) {
+    throw new Error(`Error: ${error}`)
   }
-  
-  return count
 }
 
-console.log(countingWords("This is a test of a phrase"))
+console.log(countingWords("This is a test"))
