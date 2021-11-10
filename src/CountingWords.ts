@@ -8,10 +8,7 @@ const countingWords = (phrase: string) => {
       for (const index in wordsArray) {
         count++
       }
-    } else {
-      return count
     }
-
     return count
 
   } catch (error) {
@@ -19,4 +16,4 @@ const countingWords = (phrase: string) => {
   }
 }
 
-console.log(countingWords("This is a test"))
+console.log(countingWords(""))
